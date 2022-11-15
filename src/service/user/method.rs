@@ -21,9 +21,9 @@ impl RequestHandler for AddCrmLeadHandler {
         // let db: DbClient = toolbox.get_db();
         let sdk = self.pipedrive_sdk.clone();
         toolbox.spawn_response(ctx, async move {
-            sdk.create_deal(&req.email, &req.username, &req.title, &req.message)
+            let deal = sdk.create_deal(&req.email, &req.username, &req.title, &req.message)
                 .await?;
-            Ok(AddCrmLeadResponse {})
+            Ok(deal)
         })
     }
 }
