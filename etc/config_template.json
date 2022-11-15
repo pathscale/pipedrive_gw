@@ -1,0 +1,23 @@
+{
+  "app_db": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "postgres",
+    "password": "123456",
+    "dbname": "gw"
+  },
+  "auth_db": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "postgres",
+    "password": "123456",
+    "dbname": "gw"
+  },
+  "user": {
+    "pipedrive_company": "",
+    "pipedrive_api_token": "",
+    "host": "localhost",
+    "log_level": "trace",
+    "port": 8889,
+  }
+}

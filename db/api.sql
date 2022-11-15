@@ -1,0 +1,11 @@
+CREATE SCHEMA IF NOT EXISTS api;
+
+CREATE OR REPLACE FUNCTION api.USER_SERVICE()
+RETURNS table (
+    "code" int
+)
+LANGUAGE plpgsql
+AS $$
+    BEGIN RETURN QUERY SELECT 2; END
+$$;
+        

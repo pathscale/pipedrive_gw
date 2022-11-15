@@ -1,0 +1,53 @@
+[package]
+name = "lib"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "*", features = ["derive", "env"] }
+eyre = "*"
+serde = { version = "*", features = ["derive"] }
+regex = "*"
+libc = "*"
+tracing = "*"
+tracing-subscriber = { version = "*", features = ["env-filter"] }
+byteorder = "*"
+hex = "*"
+dashmap = "*"
+rayon = "*"
+tokio = { version = "*", features = ["full"] }
+crossbeam = "*"
+nonzero_ext = "*"
+reqwest = { version = "*", default-features = false, features = ["rustls-tls", "serde_json", "json"] }
+governor = "*"
+tokio-tungstenite = { version = "*", features = [] }
+itertools = "*"
+futures = "*"
+tracing-log = "*"
+log-panics = { version = "*", features = ["with-backtrace"]}
+pin-utils = "*"
+serde_json = "*"
+ijson = "*"
+peroxide = "*"
+chrono = "*"
+static_assertions = "*"
+tokio-postgres = "*"
+uuid = "*"
+deadpool-postgres = { version = "*", features = ["serde"] }
+model = { path = "../model" }
+rustls = "0.20.6"
+rustls-pemfile = "1.0.1"
+tokio-rustls = "0.23.4"
+convert_case = "0.6.0"
+urlencoding = "*"
+tokio-cron-scheduler = "*"
+hyper = { version = "0.14.23", features = ["full"] }
+openssl = { version = "*", features = ["vendored"] }
+bytes = "*"
+kanal = { version = "0.1.0-pre7", features = ["async"] }
+
+[lib]
+name = "lib"
+path = "mod.rs"

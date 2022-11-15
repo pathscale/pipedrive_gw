@@ -1,0 +1,134 @@
+{
+  "services": [
+    {
+      "name": "user",
+      "id": 2,
+      "endpoints": [
+        {
+          "name": "AddCrmLead",
+          "code": 20660,
+          "parameters": [
+            {
+              "name": "email",
+              "ty": "String"
+            },
+            {
+              "name": "username",
+              "ty": "String"
+            },
+            {
+              "name": "title",
+              "ty": "String"
+            },
+            {
+              "name": "message",
+              "ty": "String"
+            }
+          ],
+          "returns": [],
+          "stream_response": [],
+          "description": "",
+          "json_schema": null
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "Enum": {
+        "name": "role",
+        "variants": [
+          {
+            "name": "guest",
+            "value": 0,
+            "comment": ""
+          },
+          {
+            "name": "user",
+            "value": 1,
+            "comment": ""
+          },
+          {
+            "name": "admin",
+            "value": 2,
+            "comment": ""
+          },
+          {
+            "name": "owner",
+            "value": 3,
+            "comment": ""
+          },
+          {
+            "name": "developer",
+            "value": 4,
+            "comment": ""
+          }
+        ]
+      }
+    },
+    {
+      "Enum": {
+        "name": "recovery_question_category",
+        "variants": [
+          {
+            "name": "childhood",
+            "value": 0,
+            "comment": ""
+          },
+          {
+            "name": "education",
+            "value": 1,
+            "comment": ""
+          },
+          {
+            "name": "family",
+            "value": 2,
+            "comment": ""
+          },
+          {
+            "name": "favorite",
+            "value": 3,
+            "comment": ""
+          },
+          {
+            "name": "first",
+            "value": 4,
+            "comment": ""
+          },
+          {
+            "name": "personal",
+            "value": 5,
+            "comment": ""
+          },
+          {
+            "name": "pet",
+            "value": 6,
+            "comment": ""
+          },
+          {
+            "name": "work",
+            "value": 7,
+            "comment": ""
+          },
+          {
+            "name": "historical",
+            "value": 8,
+            "comment": ""
+          }
+        ]
+      }
+    },
+    {
+      "Enum": {
+        "name": "service",
+        "variants": [
+          {
+            "name": "user",
+            "value": 2,
+            "comment": ""
+          }
+        ]
+      }
+    }
+  ]
+}

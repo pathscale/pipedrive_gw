@@ -1,0 +1,7 @@
+[build]
+xargo = false
+build-std = false
+default-target = "x86_64-unknown-linux-gnu"
+#zig = "2.17"
+
+pre-build = ["apt update", "apt install -y pkg-config libudev-dev libssl-dev"]

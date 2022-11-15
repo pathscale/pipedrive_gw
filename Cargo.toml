@@ -1,0 +1,55 @@
+[package]
+name = "pipedrive-gw"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+eyre = "0.6.1"
+serde = { version = "1.0.144", features = ["derive"] }
+regex = "1.5.6"
+tracing = "0.1.35"
+byteorder = "1.4.3"
+hex = "0.4.3"
+dashmap = "5.3.4"
+rayon = "1.5.3"
+tokio = { version = "1", features = ["full"] }
+crossbeam = "*"
+nonzero_ext = "*"
+reqwest = { version = "*", default-features = false, features = ["rustls-tls", "serde_json", "json"] }
+tokio-tungstenite = { version = "*", features = [] }
+itertools = "0.10.3"
+futures = "*"
+serde_json = "*"
+peroxide = "*"
+chrono = "*"
+static_assertions = "*"
+deadpool-postgres = "*"
+tokio-cron-scheduler = "*"
+model = { path = "src/model" }
+gen = { path = "src/gen" }
+lib = { path = "src/lib" }
+sha2 = "*"
+tap = "*"
+bytes = "*"
+tempfile = "*"
+base64 = "*"
+
+[dependencies.uuid]
+version = "1.1.2"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+    "serde",             # Enable serde support
+]
+[features]
+default = []
+
+[lib]
+path = "src/service/lib.rs"
+
+[[bin]]
+name = "user"
+path = "src/service/user/main.rs"

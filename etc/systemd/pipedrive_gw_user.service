@@ -1,0 +1,21 @@
+[Unit]
+Description=pipedrive_gw user
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+User=gw
+Type=simple
+Restart=always
+RestartSec=1
+WorkingDirectory=/home/gw/pipedrive_gw
+ExecStart=/home/gw/pipedrive_gw/target/release/user --host=pipedrive_gw.defi.digital --port=443 --config=etc/config.json'
+
+StandardError=append:/home/gw/pipedrive_gw/log/pipedrive_gw_user.log
+StandardOutput=append:/home/gw/pipedrive_gw/log/pipedrive_gw_user.log
+StandardInput=null
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=default.target
+
