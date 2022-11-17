@@ -8,8 +8,7 @@ then
     exit $COMPILE
 fi
 set -e
-(cd ../target/x86_64-unknown-linux-gnu/release/ && rsync -avizh auth user admin cv:coldvaults/target/release/ )
+(cd ../target/x86_64-unknown-linux-gnu/release/ && rsync -avizh user pipedrive@cv:bin/ )
 ssh root@cv 'bash -s' < restart_services.sh
 
-./upload_docs.sh
 
